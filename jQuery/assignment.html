@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title1">Add Student Registration</h1>
+    
+
+    <form action="request.php">
+        <label for="name">Name:</label>
+        <input type="text" name="stu_name" id="name">
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="stu_email" id="email">
+        <br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="number" name="stu_phone" id="phone">
+        <br><br>
+
+        <label for="year">Years:</label>
+        <select name="stu_year" id="year">
+            <option value="">Choose Years</option>
+            <option value="1">First Year</option>
+            <option value="2">Second Year</option>
+            <option value="3">Third Years</option>
+        </select>
+    </form>
+    <br>
+    <button>Add</button>
+
+    <br><br>
+
+    <table border="1" cellspacing="0" cellpadding="25">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Year</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1.</td>
+            <td>Hla Hla</td>
+            <td>hlahla@gmail.com</td>
+            <td>09421168686</td>
+            <td>First Year</td>
+            <td><button id="btn">Edit</button></td>
+        </tr>
+    </tbody>
+    </table>
+    
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                $('#title1').text("Update Student Registration");
+            });
+        });
+    </script>
+</body>
+</html>
